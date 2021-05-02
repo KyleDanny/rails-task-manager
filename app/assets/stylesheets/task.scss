@@ -1,4 +1,94 @@
 // Place all the styles related to the task controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-color: #feffda;
+}
 
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-family: 'Courier New', monospace;
+}
+
+.nav-bar li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+.nav-bar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-bar li a:hover {
+  background-color: #84e600;
+}
+
+.footer {
+  position: fixed;
+  height: 80px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+.footer-links a {
+  color: white;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+  color: #84e600;
+}
+.container {
+  justify-content: center;
+ /* border: 5px solid red; */
+  margin: 40px;
+  font-family: 'Courier New', monospace;
+}
+
+.item {
+  margin: 0 auto;
+  list-style-type: none;
+  width: 50%;
+  margin-top: 20px;
+}
+
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  color: #84e600;
+  border: 1px solid #84e600;
+}
+
+.form-size {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.margin-spacing {
+  margin-top: 40px;
+}

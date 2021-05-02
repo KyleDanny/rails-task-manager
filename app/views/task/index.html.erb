@@ -1,23 +1,32 @@
-<h1>My tasks</h1>
+<div class ="container">
 
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
+  <div class="item">
+    <h1>MY TASKS</h1>
+  </div>
 
-      <%if task.completed == true %>
-        <i class="fa fa-check-square-o" aria-hidden="true"></i>
-      <% else %>
-        <i class="fa fa-square-o" aria-hidden="true"></i>
-      <%end %>
+  <ul>
+    <% @tasks.each do |task| %>
+     <div class="item">
+      <li>
+        <%if task.completed == true %>
+          <i class="fa fa-check-square-o" aria-hidden="true"></i>
+        <% else %>
+          <i class="fa fa-square-o" aria-hidden="true"></i>
+        <%end %>
 
-      <%=link_to task.title, task %>
-      <%= link_to tasks_path(task), method: :delete, data: {confirm: "Delete '#{task.title}'?"} do %>
-      <i class="far fa-trash-alt"></i>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+        <%=link_to task.title, task %>
+        <%= link_to task_path(task), method: :delete, data: {confirm: "Delete '#{task.title}'?"} do %>
+        <i class="far fa-trash-alt"></i>
+        <% end %>
+      </li>
+     </div>
 
-<%=link_to "+ Add a new task", tasks_new_path %>
+    <% end %>
+  </ul>
+
+  <div class="item margin-spacing">
+    <%=link_to "+ Add a new task", tasks_new_path, class: "btn-ghost" %>
+  </div>
+</div>
 
 
